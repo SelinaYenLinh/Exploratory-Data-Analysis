@@ -227,4 +227,10 @@ Inspect structurer
 
 📝 Bonus: Automated EDA Report
 - An optional HTML report was generated using ydata_profiling for deeper automated insight.
-- Link: [Download](D:\Code\Exploratory-Data-Analysis\EDA_Report.html)
+
+```python
+profile = ProfileReport(df, title="EDA Report")
+profile.to_file("EDA_Report.html")
+```
+
+- Result: [Click here](D:\Code\Exploratory-Data-Analysis\EDA_Report.html)
