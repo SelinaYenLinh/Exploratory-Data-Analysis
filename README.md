@@ -233,4 +233,5 @@ profile = ProfileReport(df, title="EDA Report")
 profile.to_file("EDA_Report.html")
 ```
 
-- Result: [Click here](D:\Code\Exploratory-Data-Analysis\EDA_Report.html)
+- Result: 
+[Click here](D:\Code\Exploratory-Data-Analysis\EDA_Report.html)
