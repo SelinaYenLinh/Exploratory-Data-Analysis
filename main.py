@@ -118,15 +118,18 @@ df_keeplast = df.drop_duplicates(subset=['Coaster Name', 'Location', 'Opening Da
 ax = df['Year Introduced'].value_counts().head(10).plot(kind='bar', title="Top 10 Year Introduced")
 ax.set_xlabel("Year")
 ax.set_ylabel("Count")
+# plt.show()
 
 ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
 ax.set_xlabel(["Speed MPH"])
+# plt.show()
 
 ax = df['Speed MPH'].plot(kind='kde', title="Speed MPH")
 ax.set_xlabel('Speed MPH')
+# plt.show()
 
-# print(df['Type Main'].value_counts())
-ax = df['Type Main'].value_counts().plot(kind='bar')
+print(df['Type Main'].value_counts())
+ax = df['Type Main'].value_counts().plot(kind='bar', title= "Three Types")
 # plt.show()
 
 # ======================================
@@ -172,6 +175,7 @@ ax = avg_by_decade.plot(
 )
 ax.set_ylabel('Average Value')
 plt.grid(True)
+# plt.show()
 
 ax = avg_by_decade.plot(kind='bar', x='Decade', y='Speed MPH', title='Average Speed By Decade')
 # plt.show()

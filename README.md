@@ -112,16 +112,24 @@ Inspect structurer
     plt.show()
     ```
 
+    ![Top 10 Year Introduced](image.png)
+
 - Distribution of coaster speeds and heights
 
     ```python
     ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
     ax.set_xlabel(["Speed MPH"])
+    ```
 
+    ![Speed MPH](image-1.png)
+
+    ```python
     ax = df['Speed MPH'].plot(kind='kde', title="Speed MPH")
     ax.set_xlabel('Speed MPH')
     plt.show()
     ```
+
+    ![Speed MPH](image-2.png)
 
 - Categorical distributions (e.g., coaster types)
 
@@ -130,17 +138,32 @@ Inspect structurer
     plt.show()
     ```
 
+    ![alt text](image-3.png)
+    
+
 - Scatterplots: Speed vs Height, with color by year
     
     ```python
     df.plot(kind='scatter', x='Speed MPH', y='Height FT', title='Coaster Speed vs Height')
+    ```
 
+    ![Coaster Speed vs Height](image-4.png)
+
+    ```python
     ax = sns.scatterplot(x='Speed MPH', y='Height FT', hue='Year Introduced', data=df)
     ax.set_title('Coaster Speed vs Height')
+    ```
 
+    ![Coaster Speed vs Height](image-5.png)
+    
+    
+    ```python
     sns.pairplot(df,vars=['Year Introduced', 'Speed MPH', 'Height FT','Inversions Clean', 'Gforce Clean'], hue='Type Main')
     plt.show()
     ```
+
+    ![alt text](image-6.png)
+
 4. 🔗 Feature Relationships
 - Pair plots by Type
     
@@ -167,6 +190,8 @@ Inspect structurer
     avg_by_decade = df.groupby('Decade')[['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean']] \
                     .mean().round(2).reset_index()
     ```
+
+    ![alt text](image-8.png)
 - Design evolution by decade (e.g., higher speeds and heights in 2000s+)
     
     ```python
@@ -182,12 +207,16 @@ Inspect structurer
     plt.show()
     ```
 
+    ![alt text](image-9.png)
+
 - Multi-metric line and bar charts for insights across decades
     
     ```python
     ax = avg_by_decade.plot(kind='bar', x='Decade', y='Speed MPH', title='Average Speed By Decade')
     plt.show()
     ```
+
+    ![alt text](image-10.png)
 
 🔍 Key Insights  
 - Coaster speed and height have significantly increased over decades
@@ -198,3 +227,4 @@ Inspect structurer
 
 📝 Bonus: Automated EDA Report
 - An optional HTML report was generated using ydata_profiling for deeper automated insight.
+- Link: [Download](D:\Code\Exploratory-Data-Analysis\EDA_Report.html)
