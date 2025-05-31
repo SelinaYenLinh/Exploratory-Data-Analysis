@@ -1,4 +1,4 @@
-![](Roller_Coaster_Data_Analysis_—_Python_EDA_Project.png)
+![](D:\Code\Exploratory-Data-Analysis\Assets\Roller_Coaster_Data_Analysis_—_Python_EDA_Project.png)
 
 ### 🎢 *Exploring the evolution of roller coaster designs using Python & Pandas*
 

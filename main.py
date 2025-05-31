@@ -118,7 +118,7 @@ df_keeplast = df.drop_duplicates(subset=['Coaster Name', 'Location', 'Opening Da
 ax = df['Year Introduced'].value_counts().head(10).plot(kind='bar', title="Top 10 Year Introduced")
 ax.set_xlabel("Year")
 ax.set_ylabel("Count")
-# plt.show()
+plt.show()
 
 ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
 ax.set_xlabel(["Speed MPH"])
