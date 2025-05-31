@@ -7,7 +7,7 @@ from ydata_profiling import ProfileReport
 # Step 1: Data Understanding
 # ======================================
 
-df = pd.read_csv("coaster_db.csv")
+df = pd.read_csv("Dataset/coaster_db.csv")
 
 # print(df.shape)
 # print(df.head(10))
@@ -184,5 +184,5 @@ ax = avg_by_decade.plot(kind='bar', x='Decade', y='Speed MPH', title='Average Sp
 # Generate EDA Report (optional)
 # ======================================
 
-# profile = ProfileReport(df, title="EDA Report")
-# profile.to_file("EDA_Report.html")
+profile = ProfileReport(df, title="EDA Report")
+profile.to_file("EDA_Report.html")
