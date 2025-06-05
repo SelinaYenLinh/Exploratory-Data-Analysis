@@ -7,7 +7,7 @@ from ydata_profiling import ProfileReport
 # Step 1: Data Understanding
 # ======================================
 
-df = pd.read_csv("Dataset/coaster_db.csv")
+df = pd.read_csv("D:\Code\Exploratory-Data-Analysis\Dataset\coaster_db.csv")
 
 # print(df.shape)
 # print(df.head(10))
@@ -45,7 +45,7 @@ df = df[[
     'Inversions_clean', 'Gforce_clean'
 ]].copy()
 
-# Convert types
+# Convert types 
 df["opening_date_clean"] = pd.to_datetime(df["opening_date_clean"])
 
 # Rename columns
@@ -118,7 +118,7 @@ df_keeplast = df.drop_duplicates(subset=['Coaster Name', 'Location', 'Opening Da
 ax = df['Year Introduced'].value_counts().head(10).plot(kind='bar', title="Top 10 Year Introduced")
 ax.set_xlabel("Year")
 ax.set_ylabel("Count")
-plt.show()
+# plt.show()
 
 ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
 ax.set_xlabel(["Speed MPH"])
