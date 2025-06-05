@@ -1,4 +1,4 @@
-![](D:\Code\Exploratory-Data-Analysis\Assets\Roller_Coaster_Data_Analysis_—_Python_EDA_Project.png)
+![](Assets/Roller_Coaster_Data_Analysis_—_Python_EDA_Project.png)
 
 ### 🎢 *Exploring the evolution of roller coaster designs using Python & Pandas*
 
@@ -112,7 +112,8 @@ Inspect structurer
     plt.show()
     ```
 
-    ![Top 10 Year Introduced](image.png)
+
+![]("Assets/Top_10_Year_Introduced.png")
 
 - Distribution of coaster speeds and heights
 

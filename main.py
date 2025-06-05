@@ -115,39 +115,39 @@ df_keeplast = df.drop_duplicates(subset=['Coaster Name', 'Location', 'Opening Da
 
 # print(df['Year Introduced'].value_counts())
 
-ax = df['Year Introduced'].value_counts().head(10).plot(kind='bar', title="Top 10 Year Introduced")
-ax.set_xlabel("Year")
-ax.set_ylabel("Count")
+# ax = df['Year Introduced'].value_counts().head(10).plot(kind='bar', title="Top 10 Year Introduced")
+# ax.set_xlabel("Year")
+# ax.set_ylabel("Count")
 # plt.show()
 
-ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
-ax.set_xlabel(["Speed MPH"])
+# ax = df['Speed MPH'].plot(kind='hist', bins=20, title="Speed MPH")
+# ax.set_xlabel(["Speed MPH"])
 # plt.show()
 
-ax = df['Speed MPH'].plot(kind='kde', title="Speed MPH")
-ax.set_xlabel('Speed MPH')
+# ax = df['Speed MPH'].plot(kind='kde', title="Speed MPH")
+# ax.set_xlabel('Speed MPH')
 # plt.show()
 
-print(df['Type Main'].value_counts())
-ax = df['Type Main'].value_counts().plot(kind='bar', title= "Three Types")
+# print(df['Type Main'].value_counts())
+# ax = df['Type Main'].value_counts().plot(kind='bar', title= "Three Types")
 # plt.show()
 
 # ======================================
 # Step 4: Feature Relationships
 # ======================================
 
-df.plot(kind='scatter', x='Speed MPH', y='Height FT', title='Coaster Speed vs Height')
+# df.plot(kind='scatter', x='Speed MPH', y='Height FT', title='Coaster Speed vs Height')
 
-ax = sns.scatterplot(x='Speed MPH', y='Height FT', hue='Year Introduced', data=df)
-ax.set_title('Coaster Speed vs Height')
+# ax = sns.scatterplot(x='Speed MPH', y='Height FT', hue='Year Introduced', data=df)
+# ax.set_title('Coaster Speed vs Height')
 
-sns.pairplot(df,
-             vars=['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean'],
-             hue='Type Main')
+# sns.pairplot(df,
+#              vars=['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean'],
+#              hue='Type Main')
 # plt.show()
 
-df_corr = df[['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean']].dropna().corr()
-sns.heatmap(df_corr, annot=True)
+# df_corr = df[['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean']].dropna().corr()
+# sns.heatmap(df_corr, annot=True)
 # plt.show()
 
 # ======================================
@@ -164,7 +164,7 @@ df['Decade'] = ((df['Year Introduced'] // 10) * 10).astype('str') + "s"
 
 avg_by_decade = df.groupby('Decade')[['Year Introduced', 'Speed MPH', 'Height FT', 'Inversions Clean', 'Gforce Clean']] \
                   .mean().round(2).reset_index()
-# print(avg_by_decade)
+print(avg_by_decade)
 
 ax = avg_by_decade.plot(
     x='Decade',
@@ -184,5 +184,5 @@ ax = avg_by_decade.plot(kind='bar', x='Decade', y='Speed MPH', title='Average Sp
 # Generate EDA Report (optional)
 # ======================================
 
-profile = ProfileReport(df, title="EDA Report")
-profile.to_file("EDA_Report.html")
+# profile = ProfileReport(df, title="EDA Report")
+# profile.to_file("EDA_Report.html")
