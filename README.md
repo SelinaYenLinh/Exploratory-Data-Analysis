@@ -113,7 +113,7 @@ Inspect structurer
     ```
 
 
-![]("Assets/Top_10_Year_Introduced.png")
+![](Assets/Top_10_Year_Introduced.png)
 
 - Distribution of coaster speeds and heights
 
@@ -122,7 +122,7 @@ Inspect structurer
     ax.set_xlabel(["Speed MPH"])
     ```
 
-    ![Speed MPH](image-1.png)
+    ![Speed MPH](Assets/Speed_MPH_Hist.png)
 
     ```python
     ax = df['Speed MPH'].plot(kind='kde', title="Speed MPH")
@@ -130,7 +130,7 @@ Inspect structurer
     plt.show()
     ```
 
-    ![Speed MPH](image-2.png)
+    ![Speed MPH](Assets/Speed_MPH_Kde.png)
 
 - Categorical distributions (e.g., coaster types)
 
@@ -139,7 +139,7 @@ Inspect structurer
     plt.show()
     ```
 
-    ![alt text](image-3.png)
+    ![alt text](Assets/Three_Types_Bar.png)
     
 
 - Scatterplots: Speed vs Height, with color by year
@@ -148,23 +148,15 @@ Inspect structurer
     df.plot(kind='scatter', x='Speed MPH', y='Height FT', title='Coaster Speed vs Height')
     ```
 
-    ![Coaster Speed vs Height](image-4.png)
+    ![Coaster Speed vs Height](Assets/Coaster_Speed_vs_Height_Plot.png)
 
     ```python
     ax = sns.scatterplot(x='Speed MPH', y='Height FT', hue='Year Introduced', data=df)
     ax.set_title('Coaster Speed vs Height')
     ```
 
-    ![Coaster Speed vs Height](image-5.png)
+    ![Coaster Speed vs Height](Assets/Coaster_Speed_vs_Height_SNS.png)
     
-    
-    ```python
-    sns.pairplot(df,vars=['Year Introduced', 'Speed MPH', 'Height FT','Inversions Clean', 'Gforce Clean'], hue='Type Main')
-    plt.show()
-    ```
-
-    ![alt text](image-6.png)
-
 4. 🔗 Feature Relationships
 - Pair plots by Type
     
@@ -174,6 +166,7 @@ Inspect structurer
              hue='Type Main')
     plt.show()
     ```
+    ![alt text](Assets/Pairplot_By_Types.png)
 - Correlation heatmap of key numeric features
 
     ```python
@@ -181,6 +174,7 @@ Inspect structurer
     sns.heatmap(df_corr, annot=True)
     plt.show()
     ```
+    ![](Assets/HeatMap.png)
 5. 📈 Advanced Trend Analysis
 - Average Speed by Coaster Type
     ```python
@@ -192,7 +186,7 @@ Inspect structurer
                     .mean().round(2).reset_index()
     ```
 
-    ![alt text](image-8.png)
+    ![alt text](Assets/AVG_by_decade.png)
 - Design evolution by decade (e.g., higher speeds and heights in 2000s+)
     
     ```python
@@ -208,7 +202,7 @@ Inspect structurer
     plt.show()
     ```
 
-    ![alt text](image-9.png)
+    ![alt text](Assets/Roller_Coaster_Design_Trend_By_Decade.png)
 
 - Multi-metric line and bar charts for insights across decades
     
@@ -217,7 +211,7 @@ Inspect structurer
     plt.show()
     ```
 
-    ![alt text](image-10.png)
+    ![alt text](Assets/Average_Speed_By_Decade.png)
 
 🔍 Key Insights  
 - Coaster speed and height have significantly increased over decades
